@@ -1,0 +1,198 @@
+.app {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+}
+
+.app-wrap {
+  display: flex;
+  position: relative;
+  min-width: 400px;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.chat-wrap,
+.setting-wrap {
+  display: flex;
+  flex: 1;
+  padding: 12px 20px;
+  flex-direction: column;
+  border: 1px #ccc solid;
+}
+
+.app-wrap .item-hide {
+  display: none;
+}
+
+.chat-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  margin-bottom: 8px;
+  overflow-y: scroll;
+  font-size: 13px;
+}
+
+.chat-list li {
+  display: flex;
+  flex-direction: row;
+  margin: 12px 0;
+}
+
+.chat-list li.author {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.chat-list li.system {
+  justify-content: center;
+}
+
+.chat-list p {
+  min-width: 0;
+  max-width: 72%;
+  word-break: break-all;
+  line-height: 20px;
+  margin: 0;
+  padding: 4px 8px;
+  background-color: #eee;
+}
+
+.chat-list li.system p {
+  color: #999;
+  background: none;
+}
+
+.chat-list span {
+  color: #666;
+}
+
+.chat-input {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.c-i-name {
+  width: 60px;
+  margin-right: 12px;
+  font-weight: bold;
+  align-self: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.c-i-text {
+  flex: 1;
+  border: 1px solid #ccc;
+  outline: none;
+  background: none;
+}
+.c-i-submit {
+  width: 60px;
+  margin-left: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: none;
+}
+
+.chat-status {
+  display: flex;
+  font-size: 12px;
+  color: #666;
+}
+
+.c-s-channel {
+  flex: 1;
+}
+.c-s-status {
+  position: relative;
+  padding-right: 20px;
+}
+
+.c-s-channel span,
+.c-s-status span {
+  color: #333;
+}
+
+.c-s-leave,
+.c-s-reconnect {
+  padding: 0 4px;
+  margin-left: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: none;
+}
+
+.c-s-circle {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  background-color: red;
+}
+
+.c-s-gray {
+  background-color: gray;
+}
+
+.c-s-red {
+  background-color: red;
+}
+.c-s-green {
+  background-color: green;
+}
+.c-s-green-flash {
+  background-color: green;
+  animation: fadeInOut 0.5s linear 1s infinite alternate;
+}
+
+.setting-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.setting {
+  width: 364px;
+  align-self: center;
+}
+
+.setting-wrap p,
+h3 {
+  display: flex;
+}
+
+.setting-wrap span {
+  width: 80px;
+}
+.setting-wrap input {
+  flex: 1;
+}
+.setting-wrap button {
+  margin-left: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: none;
+}
+
+.setting-wrap .s-tips {
+  flex: 1;
+  font-size: 12px;
+  color: #666;
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
